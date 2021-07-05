@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_58872_needit.HideAPMsend</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>simple include to control the visibility of a ui action on a given related list &#13;
+example&#13;
+name of related list is 'u_cmdb_ci_apmflow.u_sending_business_app'&#13;
+&#13;
+ui action has a condition of&#13;
+RP.isRelatedList()&amp;&amp; new HideAPMsend().validate(RP.getListControl().getControlID())&#13;
+</description>
+        <name>HideAPMsend</name>
+        <script><![CDATA[var HideAPMsend = Class.create();
+HideAPMsend.prototype = {
+    initialize: function() {},
+    validate: function(a) {
+
+        var listcontrol = new GlideRecord('sys_ui_list_control');
+        if (listcontrol.get(a)) {
+			return listcontrol.related_list == "c";
+        }
+        return false;
+    },
+    type: 'HideAPMsend'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-28 12:34:21</sys_created_on>
+        <sys_id>6fc5a5212f772010473d1e282799b6dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HideAPMsend</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_script_include_6fc5a5212f772010473d1e282799b6dc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-28 12:34:21</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>4d18b60ddbd3bf4852dd2f17d49619be</instance_id>
+        <instance_name>dev91455</instance_name>
+        <name>sys_script_include_6fc5a5212f772010473d1e282799b6dc</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_58872_needit.HideAPMsend&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description&gt;simple include to control the visibility of a ui action on a given related list &amp;#13;
+example&amp;#13;
+name of related list is 'u_cmdb_ci_apmflow.u_sending_business_app'&amp;#13;
+&amp;#13;
+ui action has a condition of&amp;#13;
+RP.isRelatedList()&amp;amp;&amp;amp; new HideAPMsend().validate(RP.getListControl().getControlID())&amp;#13;
+&lt;/description&gt;&lt;name&gt;HideAPMsend&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var HideAPMsend = Class.create();
+HideAPMsend.prototype = {
+    initialize: function() {},
+    validate: function(a) {
+
+        var listcontrol = new GlideRecord('sys_ui_list_control');
+        if (listcontrol.get(a)) {
+			return listcontrol.related_list == "c";
+        }
+        return false;
+    },
+    type: 'HideAPMsend'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-04-28 12:34:21&lt;/sys_created_on&gt;&lt;sys_id&gt;6fc5a5212f772010473d1e282799b6dc&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;HideAPMsend&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_6fc5a5212f772010473d1e282799b6dc&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-04-28 12:34:21&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1974133689</payload_hash>
+        <record_name>HideAPMsend</record_name>
+        <reverted_from/>
+        <source>211188692faf2010473d1e282799b632</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-28 12:34:21</sys_created_on>
+        <sys_id>2f562d292ff32010473d1e282799b690</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17918791e720000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-28 12:34:21</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>27562d292df32010f918ee0cb6180990</update_guid>
+        <update_guid_history>27562d292df32010f918ee0cb6180990:1974133689</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-04-28 12:40:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>6129528d53f74061b5655489654e1ac9</sys_id>
+        <sys_metadata>6fc5a5212f772010473d1e282799b6dc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>HideAPMsend</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_script_include_6fc5a5212f772010473d1e282799b6dc</sys_update_name>
+        <sys_update_version display_value="sys_script_include_6fc5a5212f772010473d1e282799b6dc">2f562d292ff32010473d1e282799b690</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-04-28 12:40:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
